@@ -1,0 +1,362 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 50px; /* espaço para a barra de navegação fixa */
+    padding-bottom: 50px; /* espaço para o rodapé fixo */
+    background-color: #f2f2f2; /* fundo claro e neutro */
+}
+
+/* Barra de navegação superior */
+.navbar {
+    background-color: #a0a0a0; /* Cinza suave */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+h2{
+    margin-left: 20px;
+}
+
+.navbar-title {
+    font-size: 1.5em;
+}
+
+.date-time {
+    font-size: 1em;
+}
+
+/* Barra de filial */
+.branch-info {
+    background-color: #c4c4c4; /* Cinza claro para diferenciar do navbar */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Botões de ordenação */
+.sorting-options {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.btn {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 20px;
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn.active {
+    background-color: #555; /* Tom mais claro para o botão ativo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Blocos de departamentos */
+.departments {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.department-card {
+    background-color: #333;
+    color: #fff;
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.department-card:hover {
+    background-color: #555; /* Tom mais claro no hover */
+}
+
+/* Rodapé */
+footer {
+    background-color: #a0a0a0;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Título da página */
+.page-title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Lista de funcionários */
+/* Estilização da lista de funcionários */
+.employee-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    margin-left: 40px; /* Margin inicial à esquerda */
+}
+
+.list-itens {
+    display: flex;
+    gap: 20px; /* Espaço entre os itens dentro de cada linha */
+    margin-bottom: 15px; /* Espaço entre as linhas */
+    align-items: center;
+    width: 100%;
+}
+
+.list-itens button {
+    background-color: #ccc; /* Estilo do botão como no rodapé */
+    color: black;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: auto;
+}
+
+.list-itens button:hover {
+    background-color: #bbb; /* Cor mais escura no hover */
+}
+
+.employee-card {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.options-btn {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.options-btn:hover {
+    background-color: #777; /* Tom um pouco mais claro no hover */
+}
+
+/* Caixa de opções do funcionário */
+.options-box {
+    background-color: #fff;
+    border: 1px solid #333;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.options-box h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.options-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.options-box ul li {
+    margin: 10px 0;
+}
+
+.options-box button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.options-box button:hover {
+    background-color: #555;
+}
+
+/* Botões do rodapé */
+.footer-btn {
+    flex: 1;
+    padding: 15px;
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+    background-color: #ccc; /* Cinza claro */
+    cursor: pointer;
+    border: none;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+/* Efeito de hover para os botões do rodapé */
+.footer-btn:hover {
+    background-color: #bbb; /* Cinza mais escuro no hover */
+    transform: scale(0.99);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    width: 300px;
+    margin-left: 150px;
+    margin-top: 20px;
+}
+
+#mensagem {
+    margin-left: 150px;
+    margin-top: 40px;
+    color: #333;
+}
+
+/* Estilo para o modal de opções */
+#opcoesModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+    z-index: 1001;
+}
+
+.modal-content {
+    background-color: #a0a0a0; /* Mesma cor do rodapé */
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px; /* Defina uma largura para centralização adequada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo internamente */
+}
+
+.modal-content h3 {
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Botões de opções dentro do modal */
+.modal-content button {
+    flex: 1;
+    padding: 15px;
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+    background-color: #ccc; /* Mesmo cinza do rodapé */
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 5px 0; /* Espaço entre os botões */
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.modal-content button:hover {
+    background-color: #bbb; /* Cinza um pouco mais escuro ao passar o mouse */
+    transform: scale(0.98); /* Pequena escala para efeito de clique */
+}
+
+/* Seção de exclusão do funcionário */
+.delete_employ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 70px; /* espaço abaixo do cabeçalho */
+}
+
+.delete_employ h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.delete_employ p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Botão de confirmação */
+button[type="submit"] {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+.confirm_button{
+    margin-left: 0px;
+}
